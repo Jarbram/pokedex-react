@@ -13,14 +13,12 @@ function PokemonCard({
   stats,
   statsName,
 }) {
-
   const [isShow,setIsShown]= useState(false);
-
-
 
   return(
     <div className="container">
     {isShow && (
+    <div className="container-show">
     <div className="show">
     <div className="stat-container-title">
     <img src={image} alt={name} className="image-title"/>
@@ -29,7 +27,7 @@ function PokemonCard({
     <img src={pokeball} alt="pokeball" className="pokeball-title"/>
     </div>
     <img src={image} alt={name} />
-    <div style={{display:"flex", width:"100%"}}>
+    <div style={{display:"flex", width:"100%"}} className="stat-container">
     <div style={{background:"#dbdbd9",textAlign:"center"}} className="stats-left">
     <p>Type</p>
     <p>Height</p>
@@ -40,17 +38,6 @@ function PokemonCard({
     <p>{height}0 cm</p>
     <p>{weight} lbs</p>
     </div>
-    </div>
-    <div className="base-stats">
-    <div>
-    {statsName.map((stats)=>(
-      <p className="stats">{stats}</p>
-      ))}
-    </div>
-    <div>
-    {stats.map((stats)=>(
-      <p className="stats">{stats}</p>
-      ))}
     </div>
     </div>
     </div>

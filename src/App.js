@@ -1,7 +1,6 @@
 import React from 'react'
 import Topbar from './components/topbar/Topbar';
 import './App.css'
-import BottomBar from './components/bottomBar/BottomBar';
 import PokeList from './components/pokeList/PokeList';
 
 
@@ -11,7 +10,6 @@ const App = () => {
     <>
     <Topbar/>
     <PokeList />
-    <BottomBar/>
     </>
   );
 }
